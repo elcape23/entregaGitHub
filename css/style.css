@@ -84,7 +84,7 @@ header{
 
 /*Fondo de pantalla index*/
 .body__index{
-    background: url(/img/fondo_ppal.png);
+    background: url(img/fondo_ppal.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
