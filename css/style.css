@@ -1,0 +1,508 @@
+/*Eliminar propiedades por defecto*/
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Work Sans', sans-serif;
+}
+
+/*ÍNDEX*/
+
+/*Encabezado*/
+header{
+    display: flex;
+}
+
+/*Logo de marca*/
+.encabezado__logo a img{
+    position: absolute;
+    margin-top: 3vh;
+    margin-left: 10vw;
+
+}
+
+/*Menú*/
+.navegador{
+    display: flex;
+    width: 100%;
+    height: 9vh;
+    justify-content: right;
+}
+
+.navegador > ul{
+    display: flex;
+    list-style: none;
+    margin-top: 6vh;
+    margin-right: 2.5vw;
+}
+
+.menu > li > a{
+    display: flex;
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em;
+    margin: 0.5em;
+}
+
+.menu li a:hover{
+    opacity: 0.5;
+    transform: scale(1.1);
+}
+
+/*Sub Menú*/
+.sub__menu{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    display: none;
+    align-items: left;
+    margin-left: 10px;
+}
+
+.sub__menu li {
+    margin-top: 10px;
+}
+
+.menu li:hover .sub__menu{
+    display: flex;
+    flex-direction: column;
+}
+
+/*Logo de WhatsApp*/
+.logo__wa{
+    position: absolute;
+    position: fixed;
+    right: 3vw;
+    bottom: 5vh;
+    display: inline-block;
+}
+
+.logo__wa:hover{
+    opacity: 0.7;
+    transform: scale(1.1);
+}
+
+/*Fondo de pantalla index*/
+.body__index{
+    background: url(/img/fondo_ppal.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*Main*/
+.contenido__principal{
+    height: calc(100vh - 9vh - 4.5vh);
+    display: grid;
+    grid-template-areas: ". secundario"
+                         ". principal"
+                         ". proyecto"
+                         ". wa";
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 40% 10% 8% 42%;
+    justify-items: left;
+    align-items: end;
+}
+
+/*Título Residencial*/
+.contenido__principal--titulo2{
+    grid-area: secundario;
+    font-size: 1.8vh;
+}
+
+
+/*Título Edificio A1*/
+.contenido__principal--titulo{
+    grid-area: principal;
+    font-size: 5vh;
+}
+
+/*Botón Ver proyecto*/
+.contenido__principal--boton{
+    grid-area: proyecto;
+}
+
+.contenido__principal--boton:hover{
+    opacity: 0.5;
+    transform: scale(1.1);
+}
+
+.boton__texto{
+    text-decoration: none;
+    color: black;
+    font-size: 2.5vh;
+}
+
+/*Pie de página*/
+footer{
+    height: 4.5vh;
+    display: grid;
+    grid-template-areas: "logo copyright";
+    grid-template-columns: 40% 60%;
+    justify-content: center;
+    align-items: center;
+}
+
+.pie__texto{
+    grid-area: copyright;
+    color: white;
+}
+
+/*Logos RRSS*/
+.logos__RRSS--lista{
+    grid-area: logo;
+    display: flex;
+    list-style: none;
+    margin-left: 32vw;
+    width: 20%;
+}
+
+.logos__RRSS--lista li{
+    width: 100%;
+}
+
+.logos__RRSS--lista li a img{
+    display: flex;
+    width: 70%;
+}
+
+.logos__RRSS--lista li a img:hover{
+    opacity: 0.5;
+    transform: scale(1.1);
+}
+
+
+
+/*PÁGINA PROYECTOS*/
+.body__proyectos--encabezado{
+    display: flex;
+    height: 10vh;
+}
+
+.body__proyectos{
+    background-color: white;
+}
+
+/*Logo de WhatsApp en página Proyectos*/
+.logo__wa--proyecto{
+    position: absolute;
+    position: fixed;
+    right: 3vw;
+    bottom: 5vh;
+    display: inline-block;
+}
+
+.logo__wa--proyecto:hover{
+    opacity: 0.7;
+    transform: scale(1.1);
+}
+
+/*GRID*/
+
+/*Main de página Proyectos*/
+.contenido__principal--proyecto{
+    height: calc(100vh - 9vh - 4.5vh);
+    display: grid;
+    grid-template-areas: ". secundario . . ."
+                         ". principal . . ."
+                         ". proyecto1 . proyecto2 ."
+                         "logo proyecto3 . proyecto4 .";
+    grid-template-columns: 20% 25% 5% 25% 20%;
+    grid-template-rows: 5% 10% 40% 45%;
+}
+
+/*Imágenes de proyectos*/
+.contenido__principal--proyecto img{
+    width: 100%;
+}
+
+/*Título Nuestros*/
+.contenido__principal--titulo2--proyecto{
+    grid-area: secundario;
+    font-size: 1.8vh;
+    align-self: end;
+}
+
+/*Título Proyectos*/
+.contenido__principal--titulo--proyecto{
+    grid-area: principal;
+    font-size: 5vh;
+    align-self: center;
+}
+
+/*Proyecto Edificio A1*/
+.proyecto1{
+    grid-area: proyecto1;
+}
+
+/*Proyecto Cafayate A32*/
+.proyecto2{
+    grid-area: proyecto2;
+}
+
+/*Proyecto Casa CV*/
+.proyecto3{
+    grid-area: proyecto3;
+}
+
+/*Proyecto Edificio SF*/
+.proyecto4{
+    grid-area: proyecto4;
+}
+
+/*Logos de RRSS en página Proyectos*/
+.logos__RRSS--proyecto{
+    grid-area: logo;
+    display: flex;
+    width: 40%;
+    margin-left: 7vw;
+    margin-bottom: 5vh;
+}
+
+.logos__RRSS--proyecto li{
+    width: 80%;
+    list-style: none;
+    margin: 2vh
+}
+
+.logos__RRSS--proyecto li a img{
+    display: flex;
+    width: 60%;
+}
+
+.logos__RRSS--proyecto li a img:hover{
+    opacity: 0.5;
+    transform: scale(1.1);
+}
+
+/*Pie de página en Proyectos*/
+footer{
+    display: grid;
+    grid-template-areas: "logo copyright";
+    grid-template-columns: 40% 60%;
+    justify-content: center;
+    align-items: center;
+}
+
+.pie__texto--proyecto{
+    grid-area: copyright;
+    color: black;
+    margin-bottom: 2vh;
+}
+
+/*MEDIAQUERIES*/
+
+@media only screen and (min-width: 375px) and (max-width: 768px){
+    .body__index{
+        background: url(/img/fondo_mobile.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .contenedor{
+        height: 100vh;
+        display: grid;
+        grid-template-areas: "header header"
+                             "nav nav"
+                             "main main"
+                             "footer footer";
+        grid-template-rows: 5% 7% 78% 10%;
+        grid-template-columns: 50% auto;
+        justify-content: center;
+    }
+
+    header{
+        grid-area: header;
+        width: 50%;
+        justify-content: center;
+    }
+
+    /*Logo de marca*/
+    .encabezado__logo a img{
+        position: absolute;
+        margin-top: 2vh;
+        margin-left: 0vh;
+    
+    }
+
+    /*Menú*/
+    .navegador{
+        width: 100%;
+        grid-area: nav;
+        justify-content: end;
+        align-self: end;
+    }
+
+    .menu{
+        display: flex;
+        width: 100%;
+        margin-right: 0%;
+        justify-content: center;
+    }
+
+    .menu li a{
+        color: white;
+        background-color: rgba(0, 0, 0, 0.6);
+        font-size: 1.8vh;
+        padding: .8vh;
+        border-radius: .5vh;
+
+    }
+
+    /*Esconder Sub Menú*/
+    .sub__menu{
+        display: none;
+    }
+
+    /*Main*/
+    .contenido__principal{
+        grid-area: main;
+        width: 100%;
+        display: grid;
+        grid-template-areas: ". wa"
+                             "ppal ppal"
+                             "proy proy";
+        grid-template-rows: 40% 40% 20%;
+    }
+
+    /*Título Residencial*/
+    .contenido__principal--titulo2{
+        display: none;
+    }
+
+    /*Título Edificio A1*/
+    .contenido__principal--titulo{
+        grid-area: ppal;
+        justify-self: center;
+        align-self: end;
+        font-size: 4vh;
+        background-color: rgba(255, 255, 255, 0.6);
+        border-radius: 1vh;
+        padding: 1vh;
+    }
+
+    /*Botón Ver Proyecto*/
+    .contenido__principal--boton{
+        grid-area: proy;
+        display: flex;
+        justify-self: center;
+        align-self: center;
+        font-size: 2vh;
+        background-color: rgba(255, 255, 255, 0.6);
+        border-radius: 1vh;
+        padding: .5vh;
+    }
+
+    /*Logo WhatsApp*/
+    .logo__wa{
+        grid-area: wa;
+        justify-self: right;
+        align-self: center;
+    }
+
+    /*Pie de página Índex*/
+    footer{
+        grid-area: footer;
+        align-self: end;
+        margin-bottom: 1vh;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    /*Logos RRSS*/
+    .logos__RRSS--lista{
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: .5vh;
+        width: 100%;
+        display: flex;
+        list-style: none;
+        justify-content: center;
+        align-self: start;
+        margin: .5vh;
+    }
+    
+    .pie__texto{
+        text-align: center;
+        color: white;
+        margin-bottom: 2vh;
+    }
+
+    /*PÁGINA PROYECTO MOBILE*/
+    .contenido__principal--proyecto{
+        grid-area: main;
+        height: 82vh;
+        display: grid;
+        grid-template-areas: ". sec ."
+                             ". ppal ."
+                             ". proyecto1 ."
+                             ". proyecto2 ."
+                             ". proyecto3 rrss"
+                             ". proyecto4 .";
+        grid-template-columns: 20% 60% 20%;
+        grid-template-rows: 10% 7% 20% 20% 20% 23%;
+    }
+
+    /*Título Nuestros*/
+    .contenido__principal--titulo2--proyecto{
+        grid-area: sec;
+        justify-self: left;
+    }
+
+    /*Título Proyectos*/
+    .contenido__principal--titulo--proyecto{
+        grid-area: ppal;
+        justify-self: left;
+        align-self: end;
+        font-size: 4vh;
+    }
+
+    /*Proyecto Edificio A1*/
+    .proyecto1{
+        grid-area: proyecto1;
+    }
+    
+    /*Proyecto Casa CV*/
+    .proyecto2{
+        grid-area: proyecto2;
+    }
+    
+    /*Proyecto Cafayate A32*/
+    .proyecto3{
+        grid-area: proyecto3;
+    }
+    
+    /*Proyecto Edificio SF*/
+    .proyecto4{
+        grid-area: proyecto4;
+    }
+
+    /*Imágenes de cada proyecto*/
+    .contenido__principal--proyecto div img{
+        width: 80%;
+    }
+
+    /*Logo WhatsApp Proyectos*/
+    .logo__wa--proyecto{
+        grid-area: wp;
+    }
+
+    /*Logos RRSS Proyectos*/
+    .logos__RRSS--proyecto{
+        grid-area: rrss;
+        display: flex;
+        width: 100%;
+        list-style: none;
+        justify-self: right;
+        align-self: start;
+    }
+
+    .logos__RRSS--proyecto li a img{
+        width: 40%;
+    }
+
+    /*Pie de página Proyectos*/
+    .pie__texto--proyecto{
+        text-align: center;
+        color: black;
+        margin-bottom: .5vh;
+    }
+}
